@@ -1,0 +1,46 @@
+# Write your rules to this file
+# Rules could be on more lines, but must end with semicolon (;)
+# You can use hash tag for comment lines, block comments are not supported
+# Grammar definition is described in documentation
+
+
+IF player_dont_have_base THEN build_base;
+
+IF money* == hodne AND position* 0 1 == hodne THEN postav_maga := vysoko;
+IF money* == stredne AND position* 0 1 == stredne THEN postav_maga := nizko;
+IF money* == stredne AND position* 0 1 == blizko THEN postav_maga := stredne;
+IF money* == malo AND position* 0 1 == daleko THEN postav_maga := nizko;
+IF money* == hodne AND position* 0 1 == daleko THEN postav_maga := nizko;
+IF postav_maga THEN build_mage 0 1;
+
+IF money* == hodne AND position* -1 -1 == hodne THEN postav_maga := vysoko;
+IF money* == stredne AND position* -1 -1 == stredne THEN postav_maga := nizko;
+IF money* == stredne AND position* -1 -1 == blizko THEN postav_maga := stredne;
+IF money* == malo AND position* -1 -1 == daleko THEN postav_maga := nizko;
+IF money* == hodne AND position* -1 -1 == daleko THEN postav_maga := nizko;
+IF postav_maga THEN build_mage -1 -1;
+
+IF money* == hodne AND position* 3 -4 == hodne THEN postav_maga := vysoko;
+IF money* == stredne AND position* 3 -4 == stredne THEN postav_maga := nizko;
+IF money* == stredne AND position* 3 -4 == blizko THEN postav_maga := stredne;
+IF money* == malo AND position* 3 -4 == daleko THEN postav_maga := nizko;
+IF money* == hodne AND position* 3 -4 == daleko THEN postav_maga := nizko;
+IF postav_maga THEN build_mage 3 -4;
+
+IF money* == hodne AND position* -1 -3 == hodne THEN postav_maga := vysoko;
+IF money* == stredne AND position* -1 -3 == stredne THEN postav_maga := nizko;
+IF money* == stredne AND position* -1 -3 == blizko THEN postav_maga := stredne;
+IF money* == malo AND position* -1 -3 == daleko THEN postav_maga := nizko;
+IF money* == hodne AND position* -1 -3 == daleko THEN postav_maga := nizko;
+IF postav_maga THEN build_mage -1 -3;
+
+IF money* == hodne AND position* -1 1 == hodne THEN postav_maga := vysoko;
+IF money* == stredne AND position* -1 1 == stredne THEN postav_maga := nizko;
+IF money* == stredne AND position* -1 1 == blizko THEN postav_maga := stredne;
+IF money* == malo AND position* -1 1 == daleko THEN postav_maga := nizko;
+IF money* == hodne AND position* -1 1 == daleko THEN postav_maga := nizko;
+IF postav_maga THEN build_mage -1 1;
+
+IF neighbour_for_king* AND free_money 12 THEN build_knight neighbour_for_king;
+
+#IF visible_free_tile* AND free_money 12 THEN build_knight_for_visible_tiles visible_free_tile;

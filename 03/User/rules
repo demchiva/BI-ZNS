@@ -1,0 +1,36 @@
+# Write your rules to this file
+# Rules could be on more lines, but must end with semicolon (;)
+# You can use hash tag for comment lines, block comments are not supported
+# Grammar definition is described in documentation
+
+
+IF player_dont_have_base AND free_tile* mountain THEN build_base free_tile;
+
+IF neighbour_for_king* AND free_money 12 THEN build_knight neighbour_for_king;
+IF neighbour_for_king* AND free_money 12 THEN build_knight neighbour_for_king;
+
+IF free_money 25 [0.2] AND check_uncertainly_module* 0.7 [0.7] AND current_round > 15 [0.8] THEN build_druid check_uncertainly_module WITH 0.7;
+
+IF free_money 12 [1] AND check_uncertainly_module* 0.9 [0.9] THEN build_knight_v2 check_uncertainly_module WITH 0.9;
+IF free_money 12 [1] AND check_uncertainly_module* 0.9 [0.9] THEN build_knight_v2 check_uncertainly_module WITH 0.7;
+#IF free_money 12 [1] AND check_uncertainly_module* 0.9 [0.9] THEN build_knight_v2 check_uncertainly_module WITH 0.55;
+
+IF free_money 12 [0.5] AND check_uncertainly_module* 0.1 [0.1] THEN build_knight_v2 check_uncertainly_module WITH 0.7;
+
+IF free_money 5 [0.67] AND check_uncertainly_module* 0.7 [0.7] THEN build_knight_v check_uncertainly_module WITH 0.7;
+IF free_money 5 [1] AND check_uncertainly_module* 0.7 [0.69] THEN build_knight_v check_uncertainly_module WITH 0.7;
+#IF free_money 5 [0.7] AND check_uncertainly_module* 0.7 [0.67] THEN build_knight_v check_uncertainly_module WITH 0.7;
+
+IF free_money 5 [1] AND check_uncertainly_module* 0.7 [0.3] THEN build_knight_v check_uncertainly_module WITH 0.7;
+
+IF visible_free_tile* mountain AND free_money 12 THEN build_knight_v3 visible_free_tile WITH 1;
+IF visible_free_tile* hill AND free_money 12 THEN build_knight_v3 visible_free_tile WITH 1;
+
+IF free_money 5 [1] AND check_uncertainly_module* 0.5 [0.5] THEN build_knight_v check_uncertainly_module WITH 0.7;
+IF free_money 5 [1] AND check_uncertainly_module* 0.5 [0.5] THEN build_knight_v check_uncertainly_module WITH 0.7;
+
+IF free_money 5 [0.5] AND check_uncertainly_module* 0.5 [0.3] THEN build_knight_v check_uncertainly_module WITH 0.7;
+
+IF free_money 5 [1] AND check_uncertainly_module* 0.3 [0.7] AND current_round < 15 [0.7] THEN build_knight_v check_uncertainly_module WITH 0.7;
+IF free_money 5 [1] AND check_uncertainly_module* 0.3 [0.7] AND current_round < 15 [0.7] THEN build_knight_v check_uncertainly_module WITH 0.7;
+IF free_money 5 [1] AND check_uncertainly_module* 0.3 [0.7] AND current_round < 15 [0.7] THEN build_knight_v check_uncertainly_module WITH 0.7;

@@ -1,0 +1,22 @@
+# Write your rules to this file
+# Rules could be on more lines, but must end with semicolon (;)
+# You can use hashtag for comment lines, block comments are not supported
+# Grammar definition is described in documentation
+
+IF player_dont_have_base THEN build_base 0 0;
+IF possible_to_protect_with_ent_seventh_side_a AND is_enough_resources 10 == 1 THEN locate_knight -1 -2;
+IF possible_to_protect_with_ent_seventh_side_b AND is_enough_resources 10 == 1 THEN locate_knight 1 -2;
+IF possible_to_protect_with_ent_seventh_side_c AND is_enough_resources 10 == 1 THEN locate_knight -2 -1;
+IF possible_to_protect_with_ent_seventh_side_d AND is_enough_resources 10 == 1 THEN locate_knight -2 1;
+IF possible_to_protect_with_ent_seventh_side_e AND is_enough_resources 10 == 1 THEN locate_knight 2 1;
+IF possible_to_protect_with_ent_seventh_side_f AND is_enough_resources 10 == 1 THEN locate_knight 2 -1;
+IF possible_to_protect_with_ent_seventh_side_i AND is_enough_resources 10 == 1 THEN locate_knight 0 2;
+IF possible_to_protect_with_ent_seventh_side_g AND is_enough_resources 10 == 1 THEN locate_knight 0 -2;
+IF possible_to_protect_first_side AND is_enough_resources 10 == 1 THEN locate_knight -1 0;
+IF possible_to_protect_second_side AND is_enough_resources 10 == 1 THEN locate_knight -1 1;
+IF possible_to_protect_third_side AND is_enough_resources 10 == 1 THEN locate_knight 0 -1;
+IF possible_to_protect_fourth_side AND is_enough_resources 10 == 1 THEN locate_knight 0 1;
+IF possible_to_protect_sixth_side AND is_enough_resources 10 == 1 THEN locate_knight 1 -1;
+IF possible_to_protect_fifth_side AND is_enough_resources 10 == 1 THEN locate_knight 1 1;
+IF possible_to_protect_seventh_side AND is_enough_resources 10 == 1 THEN locate_knight -1 -1;
+IF possible_to_protect_eighth_side AND is_enough_resources 10 == 1 THEN locate_knight 1 0;
